@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <!-- Page Header-->
     <div class="container">
         <header>
             <div class="header-content">
@@ -17,6 +19,7 @@
             </div>
         </header>
         
+        <!-- Sidebar contents-->
         <div class="content">
             <aside class="sidebar">
                 <section class="search-section">
@@ -49,6 +52,7 @@
                 </section>
             </aside>
             
+            <!--Patient details overview-->
             <main class="main-content">
                 <section class="patient-details-section">
                     <div class="header">
@@ -56,14 +60,15 @@
                         <a href="edit-patient.html" class="edit-button"><i class="fas fa-pencil-alt"></i> Edit</a>
                     </div>
                     <div class="patient-details">
-                        <p><strong>Name:</strong> <span id="patient-name">N/A</span></p>
+                        <p><strong>Patient Name:</strong> <span id="patient-name">N/A</span></p>
                         <p><strong>Age:</strong> <span id="patient-age">N/A</span></p>
-                        <p><strong>Height:</strong> <span id="patient-height">N/A</span></p>
-                        <p><strong>Weight:</strong> <span id="patient-weight">N/A</span></p>
+                        <p><strong>Height (cm):</strong> <span id="patient-height">N/A</span></p>
+                        <p><strong>Weight (kg):</strong> <span id="patient-weight">N/A</span></p>
                         <p><strong>History of Breast Cancer:</strong> <span id="patient-history">N/A</span></p>
                     </div>
                 </section>
                 
+                <!-- Ultrasound scan view panel-->
                 <section class="ultrasound-section">
                     <h2><i class="fas fa-file-medical"></i> Ultrasound Scan Results</h2>
                     <div class="ultrasound-details">
