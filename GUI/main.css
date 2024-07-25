@@ -1,0 +1,211 @@
+/* main.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #055D86;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px 8px 0 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0 20px;
+    font-size: 24px;
+    flex: 1;
+    text-align: center;
+}
+
+.logo {
+    height: 200px;
+    max-height: 100%;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.search-section, .add-patient-section {
+    margin-bottom: 20px;
+}
+
+.search-section h2, .patient-list h3, .add-patient-section h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+button {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #055D86;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+button:hover {
+    background-color: #033B53;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px; /* scroll view  bar by constraining heiight */
+    overflow-y: auto; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+.patient-item {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.patient-item:hover {
+    background-color: #e9ecef;
+}
+
+.add-patient-section {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-patient-section:hover {
+    background-color: #e9ecef;
+}
+
+.add-patient-section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.add-patient-section a:hover {
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-button {
+    text-decoration: none;
+    color: #055D86;
+    font-size: 18px;
+}
+
+.edit-button:hover {
+    text-decoration: underline;
+}
+
+.patient-details p,
+.ultrasound-details p {
+    margin: 5px 0;
+}
+
+.torso-visualisation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.scaled-image {
+    width: 50%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

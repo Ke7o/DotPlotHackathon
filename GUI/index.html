@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Management System</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="images/logo_header.png" alt="Company Logo" class="logo">
+                <h1>HealthTrack Visual</h1>
+                <a href="login.html" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </header>
+        
+        <div class="content">
+            <aside class="sidebar">
+                <section class="search-section">
+                    <h2><i class="fas fa-search"></i> Search Patient</h2>
+                    <form id="search-form">
+                        <div class="form-group">
+                            <label for="search-patient-id">Patient ID:</label>
+                            <input type="text" id="search-patient-id" name="search-patient-id" required>
+                        </div>
+                        <button type="submit"><i class="fas fa-search"></i> Search</button>
+                    </form>
+                </section>
+                
+                <section class="patient-list">
+                    <h3>Patient List</h3>
+                    <div class="patient-item">Patient 1</div>
+                    <div class="patient-item">Patient 2</div>
+                    <div class="patient-item">Patient 3</div>
+                    <div class="patient-item">Patient 4</div>
+                    <div class="patient-item">Patient 5</div>
+                    <div class="patient-item">Patient 6</div>
+                    <div class="patient-item">Patient 7</div>
+                    <div class="patient-item">Patient 8</div>
+                </section>
+                
+                <section class="add-patient-section">
+                    <a href="add-patient.html">
+                        <h2><i class="fas fa-user-plus"></i> Add Patient</h2>
+                    </a>
+                </section>
+            </aside>
+            
+            <main class="main-content">
+                <section class="patient-details-section">
+                    <div class="header">
+                        <h2><i class="fas fa-user"></i> Patient Details</h2>
+                        <a href="edit-patient.html" class="edit-button"><i class="fas fa-pencil-alt"></i> Edit</a>
+                    </div>
+                    <div class="patient-details">
+                        <p><strong>Name:</strong> <span id="patient-name">N/A</span></p>
+                        <p><strong>Age:</strong> <span id="patient-age">N/A</span></p>
+                        <p><strong>Height:</strong> <span id="patient-height">N/A</span></p>
+                        <p><strong>Weight:</strong> <span id="patient-weight">N/A</span></p>
+                        <p><strong>History of Breast Cancer:</strong> <span id="patient-history">N/A</span></p>
+                    </div>
+                </section>
+                
+                <section class="ultrasound-section">
+                    <h2><i class="fas fa-file-medical"></i> Ultrasound Scan Results</h2>
+                    <div class="ultrasound-details">
+                        <p><strong>Scan Date:</strong> <span id="scan-date">N/A</span></p>
+                        <p><strong>Diagnosis:</strong> <span id="diagnosis">N/A</span></p>
+                    </div>
+                    <h3><i class="fas fa-stethoscope"></i> Torso Visualisation</h3>
+                    <div class="torso-visualisation">
+                        <img src="images/torso.png" alt="Torso Visualisation" class="scaled-image" id="torso-image">
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
