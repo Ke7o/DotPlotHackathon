@@ -9,90 +9,93 @@
 </head>
 <body>
 
-    <!-- Add Patient Header -->
+    <!-- Page Header-->
     <div class="container">
         <header>
             <div class="header-content">
-                <h1><i class="fas fa-user-plus"></i> Add Patient</h1>
+                <img src="images/logo_header.png" alt="Company Logo" class="logo">
+                <h1>HealthTrack Visual</h1>
                 <a href="login.html" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
         </header>
         
+        <div class="content">
+            <main class="main-content">
+                <section class="form-section">
+                    <h2><i class="fas fa-user-plus"></i> Add Patient</h2>
+                    <form id="patient-form">
+                        <!-- Patient Name input -->
+                        <div class="form-group">
+                            <label for="patient-name"><i class="fas fa-user"></i> Patient Name:</label>
+                            <input type="text" id="patient-name" name="patient-name" required>
+                        </div>
 
-        <!-- Form inputs -->
-        <section class="form-section">
-            <form id="patient-form">
+                        <!-- Patient ID input -->
+                        <div class="form-group">
+                            <label for="patient-id"><i class="far fa-id-card"></i> Patient ID (1234):</label>
+                            <input type="text" id="patient-id" name="patient-id" required>
+                        </div>
 
-                <!-- Patient Name input -->
-                <div class="form-group">
-                    <label for="patient-name"><i class="fas fa-user"></i> Patient Name:</label>
-                    <input type="text" id="patient-name" name="patient-name" required>
-                </div>
+                        <!-- Patient Age input -->
+                        <div class="form-group">
+                            <label for="patient-age"><i class="fas fa-birthday-cake"></i> Age:</label>
+                            <input type="text" id="patient-age" name="patient-age" required>
+                        </div>
 
-                <!-- Patient ID input -->
-                <div class="form-group">
-                    <label for="patient-id"><i class="far fa-id-card"></i> Patient ID (1234):</label>
-                    <input type="text" id="patient-id" name="patient-id" required>
-                </div>
+                        <!-- Patient Height input -->
+                        <div class="form-group">
+                            <label for="patient-height"><i class="fas fa-arrows-alt-v"></i> Height (cm):</label>
+                            <input type="text" id="patient-height" name="patient-height" required>
+                        </div>
 
-                <!-- Patient Age input -->
-                <div class="form-group">
-                    <label for="patient-age"><i class="fas fa-birthday-cake"></i> Age:</label>
-                    <input type="text" id="patient-age" name="patient-age" required>
-                </div>
+                        <!-- Patient Weight input -->
+                        <div class="form-group">
+                            <label for="patient-weight"><i class="fas fa-weight"></i> Weight (kg):</label>
+                            <input type="text" id="patient-weight" name="patient-weight" required>
+                        </div>
 
-                <!-- Patient Height input -->
-                <div class="form-group">
-                    <label for="patient-height"><i class="fas fa-arrows-alt-v"></i> Height (cm):</label>
-                    <input type="text" id="patient-height" name="patient-height" required>
-                </div>
+                        <!-- Patient Breast cancer history yes/no -->
+                        <div class="form-group">
+                            <label for="patient-history"><i class="fas fa-history"></i> History of Breast Cancer:</label>
+                            <select id="patient-history" name="patient-history" required>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        
+                        <!-- US Scan Id input -->
+                        <div class="form-group">
+                            <label for="us-scan-id"><i class="fas fa-id-badge"></i> US Scan ID's (123, 124, 125):</label>
+                            <input type="text" id="us-scan-id" name="us-scan-id" required>
+                        </div>
 
-                <!-- Patient Weight input -->
-                <div class="form-group">
-                    <label for="patient-weight"><i class="fas fa-weight"></i> Weight (kg):</label>
-                    <input type="text" id="patient-weight" name="patient-weight" required>
-                </div>
+                        <!-- Scan Coordinates input -->
+                        <div class="form-group">
+                            <label for="scan-coordinates"><i class="fas fa-map-marker-alt"></i> Lesion Coordinates (A1, B2 etc.):</label>
+                            <input type="text" id="scan-coordinates" name="scan-coordinates" required>
+                        </div>
 
-                <!-- Patient Breast cancer history yes/no -->
-                <div class="form-group">
-                    <label for="patient-history"><i class="fas fa-history"></i> History of Breast Cancer:</label>
-                    <select id="patient-history" name="patient-history" required>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                
-                <!-- US Scan Id input -->
-                <div class="form-group">
-                    <label for="us-scan-id"><i class="fas fa-id-badge"></i> US Scan ID's (123, 124, 125):</label>
-                    <input type="text" id="us-scan-id" name="us-scan-id" required>
-                </div>
+                        <!-- Date of scan input -->
+                        <div class="form-group">
+                            <label for="scan-date"><i class="fas fa-calendar-alt"></i> Date of scan:</label>
+                            <input type="date" id="scan-date" name="scan-date" required>
+                        </div>
 
-                <!-- Scan Coordinates input -->
-                <div class="form-group">
-                    <label for="scan-coordinates"><i class="fas fa-map-marker-alt"></i> Lesion Coordinates (A1, B2 etc.):</label>
-                    <input type="text" id="scan-coordinates" name="scan-coordinates" required>
-                </div>
+                        <!-- Patient diagnosis input -->
+                        <div class="form-group">
+                            <label for="diagnosis"><i class="fas fa-notes-medical"></i> Diagnosis:</label>
+                            <select id="diagnosis" name="diagnosis" required>
+                                <option value="Benign">Benign</option>
+                                <option value="Malignant">Malignant</option>
+                            </select>
+                        </div>
 
-                <!-- Date of scan input -->
-                <div class="form-group">
-                    <label for="scan-date"><i class="fas fa-calendar-alt"></i> Date of scan:</label>
-                    <input type="date" id="scan-date" name="scan-date" required>
-                </div>
-
-                <!-- Patient diagnosis input -->
-                <div class="form-group">
-                    <label for="diagnosis"><i class="fas fa-notes-medical"></i> Diagnosis:</label>
-                    <select id="diagnosis" name="diagnosis" required>
-                        <option value="Benign">Benign</option>
-                        <option value="Malignant">Malignant</option>
-                    </select>
-                </div>
-
-                <!-- Submit button -->
-                <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
-            </form>
-        </section>
+                        <!-- Submit button -->
+                        <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+                    </form>
+                </section>
+            </main>
+        </div>
     </div>
 </body>
 </html>
