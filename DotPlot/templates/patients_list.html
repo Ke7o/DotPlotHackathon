@@ -1,0 +1,43 @@
+<!-- templates/patients_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patients List</title>
+</head>
+<body>
+    <h1>Patients List</h1>
+
+    <form method="GET">
+        <input type="text" name="q" placeholder="Search by patientID" value="{{ request.GET.q }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Patient ID</th>
+                <th>Patient Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>History</th>
+                <th>Scan ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+                <tr>
+                    <td>{{ patient.patientID }}</td>
+                    <td>{{ patient.patientName }}</td>
+                    <td>{{ patient.age }}</td>
+                    <td>{{ patient.height }}</td>
+                    <td>{{ patient.weight }}</td>
+                    <td>{{ patient.history }}</td>
+                    <td>{{ patient.scanID }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
