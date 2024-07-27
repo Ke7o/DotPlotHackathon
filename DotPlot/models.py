@@ -10,7 +10,7 @@ class Patients(models.Model):
     scanID = models.IntegerField()
 
     def __str__(self):
-        return self.patientname
+        return self.patientName
 
 
 class USscans(models.Model):
@@ -20,6 +20,6 @@ class USscans(models.Model):
     diagnosis = models.CharField(max_length=10)
 
     def __str__(self):
-        return f"Scan ID: {self.scan_id}, Patient: {self.patient.patient_name}"
+        return f"Scan ID: {self.scanID}"
 
 

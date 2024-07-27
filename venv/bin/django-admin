@@ -1,4 +1,4 @@
-#!/home/jconner/Documents/DotPlot/venv/bin/python3.11
+#!/home/jconner/Documents/DotPlotHackathon/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
