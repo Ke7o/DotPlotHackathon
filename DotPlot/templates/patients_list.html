@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Data Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add some basic styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        .content {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .main-content {
+            width: 75%;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header-->
+    <div class="container">
+        <header>
+            <h1>HealthTrack Visual</h1>
+        </header>
+        
+        <!-- Sidebar contents-->
+        <div class="content">
+            <aside class="sidebar">
+                <section class="search-section">
+                    <h2><i class="fas fa-search"></i> Search Patient</h2>
+                    <form id="search-form" method="GET">
+                        <div class="form-group">
+                            <label for="search-patient-id">Patient ID:</label>
+                            <input type="text" id="search-patient-id" name="search-patient-id" required>
+                        </div>
+                        <button type="submit"><i class="fas fa-search"></i> Search</button>
+                    </form>
+                </section>
+            </aside>
+            
+            <!-- Patient details overview -->
+            <main class="main-content">
+                <section class="patient-details-section">
+                    <div class="header">
+                        <h2><i class="fas fa-user"></i> Patient Details</h2>
+                    </div>
+                    <div class="patient-details">
+                        {% if patient %}
+                            <p><strong>Patient Name:</strong> <span>{{ patient.patientName }}</span></p>
+                            <p><strong>Age:</strong> <span>{{ patient.age }}</span></p>
+                            <p><strong>Height (cm):</strong> <span>{{ patient.height }}</span></p>
+                            <p><strong>Weight (kg):</strong> <span>{{ patient.weight }}</span></p>
+                            <p><strong>History of Breast Cancer:</strong> <span>{{ patient.history }}</span></p>
+                        {% else %}
+                            <p>No patient data available. Please search for a valid Patient ID.</p>
+                        {% endif %}
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
